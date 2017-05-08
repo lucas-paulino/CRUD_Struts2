@@ -14,8 +14,6 @@
         <ul>
             <li><a href="cadastro.jsp">Create</a></li>
             <li><s:a href="%{mostrar}">Read</s:a></li>
-            <li><a href="cadastro.jsp">Update</a></li>
-            <li><a href="cadastro.jsp">Delete</a></li>
         </ul>
     </body>
 </html>

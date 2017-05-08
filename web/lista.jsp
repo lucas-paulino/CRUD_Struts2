@@ -18,12 +18,22 @@
                 <td>Senha</td>
             </tr>
             <s:iterator value="clientes" var="i">
+                <s:url var="delet" action="Remover">
+                    <s:param name="codigo" value="getCodigo()"/>
+                </s:url>
+                
+                <s:url var="updade" action="Atualizar">
+                    <s:param name="codigo" value="getCodigo()"/>
+                </s:url>
+                
                 <tr>
-                    <td><s:property value="i.getCodigo()" /></td>
-                    <td><s:property value="i.getName()" /></td>
-                    <td><s:property value="i.getEmail()" /></td>
-                    <td><s:property value="i.getLogin()" /></td>
-                    <td><s:property value="i.getSenha()" /></td>
+                    <td><s:property value="#i.getCodigo()" /></td>
+                    <td><s:property value="#i.getNome()" /></td>
+                    <td><s:property value="#i.getEmail()" /></td>
+                    <td><s:property value="#i.getLogin()" /></td>
+                    <td><s:property value="#i.getSenha()" /></td>
+                    <td><s:a href="%{delet}">remover</s:a></td>
+                    <td><s:a href="%{updade}">alterar</s:a></td>
                 </tr>
             </s:iterator>
         </table>

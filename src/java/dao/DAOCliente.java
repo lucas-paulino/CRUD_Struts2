@@ -61,4 +61,16 @@ public class DAOCliente {
         }
         return clientes;
     }
+    
+    public void delete(int id){
+        Connection con = ConnectionFactory.getConnection();
+        PreparedStatement stmt = null;
+        try {
+            String sql = "DELETE FROM clientes WHERE clientes.codigo ="+id+";";
+            stmt = con.prepareStatement(sql);
+            stmt.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAOCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

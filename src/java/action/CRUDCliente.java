@@ -15,6 +15,7 @@ public class CRUDCliente extends ActionSupport {
     private List<Cliente> clientes;
     
     
+    
     public String cadastro() throws Exception {
         Cliente c = new Cliente();
         c.setNome(nome);
@@ -31,7 +32,20 @@ public class CRUDCliente extends ActionSupport {
     public String listar() throws Exception {
         DAOCliente dao = new DAOCliente();
         //clientes = new ArrayList<>();
+        
         setClientes(dao.read());
+        //System.out.println(clientes.get(0).getNome());
+        return SUCCESS;
+    }
+    
+    public String remover() throws Exception {
+        DAOCliente dao = new DAOCliente();
+        dao.delete(getCodigo());
+        return SUCCESS;
+    }
+    
+    public String atualizar() throws Exception {
+        System.out.println(getCodigo());
         return SUCCESS;
     }
     

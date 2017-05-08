@@ -8,7 +8,7 @@ public class ConnectionFactory {
     private static final String DRIVER = "org.postgresql.Driver"; //identifica serviço de BD
     private static final String URL = "jdbc:postgresql://localhost:5432/cliente"; //local do BD
     private static final String LOGIN = "postgres";
-    private static final String SENHA = "postgres";
+    private static final String SENHA = "ufc123";
     
     public static Connection getConnection(){
         try {

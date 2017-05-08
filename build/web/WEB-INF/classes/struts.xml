@@ -14,5 +14,13 @@
             <result name="success">/lista.jsp</result>
         </action>
         
+        <action name="Remover" method="remover" class="action.CRUDCliente">
+            <result name="success">/index.jsp</result>
+        </action>
+        
+        <action name="Atualizar" method="atualizar" class="action.CRUDCliente">
+            <result name="success">/index.jsp</result>
+        </action>
+        
     </package>
 </struts>
