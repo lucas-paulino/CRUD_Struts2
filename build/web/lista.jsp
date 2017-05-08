@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1>Clientes</h1>
+        <h2><s:property value="nome" /></h2>
         <table>
             <tr>
                 <td>Codigo</td>

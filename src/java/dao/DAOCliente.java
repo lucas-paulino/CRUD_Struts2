@@ -45,6 +45,7 @@ public class DAOCliente {
             
             while(rs.next()){
                 Cliente c = new Cliente();
+                
                 c.setCodigo(rs.getInt("codigo"));
                 c.setNome(rs.getString("nome"));
                 c.setEmail(rs.getString("email"));

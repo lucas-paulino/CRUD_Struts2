@@ -14,6 +14,7 @@ public class CRUDCliente extends ActionSupport {
     private String senha;
     private List<Cliente> clientes;
     
+    
     public String cadastro() throws Exception {
         Cliente c = new Cliente();
         c.setNome(nome);
@@ -29,12 +30,15 @@ public class CRUDCliente extends ActionSupport {
     
     public String listar() throws Exception {
         DAOCliente dao = new DAOCliente();
-        clientes = new ArrayList<>();
-        clientes = dao.read();
+        //clientes = new ArrayList<>();
+        setClientes(dao.read());
         return SUCCESS;
     }
     
     //Metodos get e set
+    public List<Cliente> getClientes() { return clientes; }
+    public void setClientes(List<Cliente> clientes) { this.clientes = clientes; }
+    
     public String getLogin(){ return login; }
     public void setLogin(String login){ this.login = login; }
     
