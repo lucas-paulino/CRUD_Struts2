@@ -73,4 +73,23 @@ public class DAOCliente {
             Logger.getLogger(DAOCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public void alterar(Cliente c){
+        Connection con = ConnectionFactory.getConnection();
+        PreparedStatement stmt = null;
+        try {
+            String sql = "UPDATE clientes SET nome=?, email=?, login=?, senha=? WHERE codigo=?";
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1, c.getNome());
+            stmt.setString(2, c.getEmail());
+            stmt.setString(3, c.getLogin());
+            stmt.setString(4, c.getSenha());
+            stmt.setInt(5, c.getCodigo());
+            stmt.execute();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAOCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            ConnectionFactory.closeConnection(con, stmt);
+        }
+    }
 }

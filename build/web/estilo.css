@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: calibri, sans-serif;
+    color: #888888;
+    border: none;
+}
+
+h1{
+    margin: 5px 0px 20px;
+    text-align: center;
+}
+
+#Cadastrar{
+    width: 80%;
+    margin: 0px auto;
+}
+
+#Cadastrar table, .tdInput input{
+    width: 100%;
+}
+.tdLabel{
+    width: 20%;
+}
+.tdInput{
+    width: 80%;
+}
+
+.tdInput input{
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc; 
+}
+
+input[type="submit"]{
+    margin-top: 10px;
+    float: right;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    color:#fff;
+    background-color: #888888;
+}
+
+#lista{
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-color: red;
+}
+tbody, tr{
+    width: 100% !important;
+    background-color: green;
+}
+
+#conteiner{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: #dddddd;
+    
+}
+
+#conteudo{
+    width: calc(28% - 30px);
+    min-height: 190px;
+    margin: calc(25% - 165px) auto;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 8px 8px 15px #ccc;
+}
+
+#conteudo2{
+    width: calc(48% - 30px);
+    min-height: 190px;
+    margin: calc(25% - 165px) auto;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 8px 8px 15px #ccc;
+}
+
+nav{
+    width: 80%;
+    height: 110px;
+    margin: 0px auto;
+}
+
+#criar, #listar{
+    float: left;
+    width: 33%;
+    padding: 5%;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #ccc;
+    background-color: #fff;
+}
+
+#criar img, #listar img{
+    width: 70%;
+    border-radius: 50%;
+}
+
+#criar{
+    margin-right: 12%;
+}

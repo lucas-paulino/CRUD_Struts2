@@ -22,5 +22,9 @@
             <result name="success">/index.jsp</result>
         </action>
         
+        <action name="RedrectAtualizar" method="redrectAtualizar" class="action.CRUDCliente">
+            <result name="success">/atualiza.jsp</result>
+        </action>
+        
     </package>
 </struts>

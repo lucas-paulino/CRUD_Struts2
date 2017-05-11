@@ -1,17 +1,25 @@
-<%-- 
-    Document   : atualiza
-    Created on : 08/05/2017, 20:10:04
-    Author     : aluno
---%>
-
+<%@taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <title>Atualizar</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div id="conteiner"> 
+            <div id="conteudo">
+                <h1>Atualizar</h1>
+                <s:form action="Atualizar">
+                    <s:hidden name="codigo"/>
+                    <s:textfield name="nome" label="Nome" />
+                    <s:textfield name="email" label="Email" />
+                    <s:textfield name="login" label="Login" />
+                    <s:textfield name="senha" label="Senha" />
+                    <s:submit value="Enviar" />
+                </s:form>
+            </div>
+        </div>
     </body>
 </html>
