@@ -19,10 +19,10 @@
                 <h1>Atualizar</h1>
                 <s:form action="Atualizar">
                     <s:hidden name="codigo"/>
-                    <s:textfield name="nome" label="Nome" />
-                    <s:textfield name="email" label="Email" />
-                    <s:textfield name="login" label="Login" />
-                    <s:textfield name="senha" label="Senha" />
+                    <s:textfield name="nome" label="Nome" required="required"/>
+                    <s:textfield name="email" label="Email" required="required"/>
+                    <s:textfield name="login" label="Login" required="required"/>
+                    <s:textfield name="senha" label="Senha" required="required"/>
                     <s:submit value="Enviar" />
                 </s:form>
             </div>

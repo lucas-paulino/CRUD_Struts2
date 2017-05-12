@@ -18,10 +18,10 @@
             <div id="conteudo">
                 <h1>Cadastro</h1>
                 <s:form action="Cadastrar">
-                    <s:textfield name="nome" label="Nome" />
-                    <s:textfield name="email" label="Email" />
-                    <s:textfield name="login" label="Login" />
-                    <s:password name="senha" label="Senha" />
+                    <s:textfield name="nome" label="Nome" required="required" />
+                    <s:textfield name="email" label="Email" required="required" />
+                    <s:textfield name="login" label="Login" required="required" />
+                    <s:password name="senha" label="Senha" required="required" />
                     <s:submit value="Enviar" />
                 </s:form>
             </div>
