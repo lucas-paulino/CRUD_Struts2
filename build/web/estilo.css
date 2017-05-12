@@ -13,12 +13,12 @@ h1{
     text-align: center;
 }
 
-#Cadastrar{
+#Cadastrar, #Atualizar{
     width: 80%;
     margin: 0px auto;
 }
 
-#Cadastrar table, .tdInput input{
+#Cadastrar table, #Atualizar table, .tdInput input{
     width: 100%;
 }
 .tdLabel{
@@ -30,9 +30,11 @@ h1{
 
 .tdInput input{
     height: 25px;
+    padding: 4px;
     margin-top: 10px;
     border-radius: 8px;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
+    font-size: 18px;
 }
 
 input[type="submit"]{
@@ -45,23 +47,31 @@ input[type="submit"]{
     background-color: #888888;
 }
 
-#lista{
-    display: block;
-    width: 100%;
-    height: 200px;
-    background-color: red;
-}
-tbody, tr{
-    width: 100% !important;
-    background-color: green;
-}
-
 #conteiner{
     position: absolute;
     width: 100%;
     min-height: 100%;
     background: #dddddd;
     
+}
+
+#lista{
+    width: 100%;
+    /*background-color: red;*/
+}
+
+#voltar{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    top:1%;
+    left: 1%;
+}
+#voltar img{
+    width: 100%;    
 }
 
 #conteudo{
@@ -96,7 +106,6 @@ nav{
     padding: 5%;
     height: 80px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px #ccc;
     background-color: #fff;
 }
 
