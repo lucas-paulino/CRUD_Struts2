@@ -1,0 +1,32 @@
+Postgresql
+
+- SQL Criar Banco "cliente"
+
+CREATE DATABASE cliente
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+
+- SQL Criar Tabela "clientes"
+
+CREATE TABLE public.clientes
+(
+    codigo integer NOT NULL DEFAULT nextval('clientes_codigo_seq'::regclass),
+    nome character varying COLLATE pg_catalog."default" NOT NULL,
+    email character varying COLLATE pg_catalog."default" NOT NULL,
+    login character varying COLLATE pg_catalog."default" NOT NULL,
+    senha character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT clientes_pkey PRIMARY KEY (codigo)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.clientes
+    OWNER to postgres;
